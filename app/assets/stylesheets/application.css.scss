@@ -10,6 +10,20 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require style
+ *= require bootstrap
+ *= require bootstrap-reset
+ *= require font-awesome
+ *= require jquery.easy-pie-chart
+ *= require owl.carousel
+ *= require style-responsive
+ *= require demo_page
+ *= require demo_table
+ *= require flexslider
+ *= require jquery.bxslider
+ *= require jquery.fancybox
+ *= require rs-style 
+ *= require settings
  *= require_tree .
  *= require_self
  */
