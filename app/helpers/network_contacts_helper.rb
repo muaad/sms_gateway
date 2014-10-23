@@ -1,0 +1,2 @@
+module NetworkContactsHelper
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Aggregator:</strong>
+  <%= @aggregator_country.aggregator %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @aggregator_country.country %>
+</p>
+
+<%= link_to 'Edit', edit_aggregator_country_path(@aggregator_country) %> |
+<%= link_to 'Back', aggregator_countries_path %>

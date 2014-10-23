@@ -1,0 +1,31 @@
+<h1>Listing network_contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phonebook</th>
+      <th>Email</th>
+      <th>Location</th>
+      <th>Network</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @network_contacts.each do |network_contact| %>
+      <tr>
+        <td><%= network_contact.phonebook %></td>
+        <td><%= network_contact.email %></td>
+        <td><%= network_contact.location %></td>
+        <td><%= network_contact.network %></td>
+        <td><%= link_to 'Show', network_contact %></td>
+        <td><%= link_to 'Edit', edit_network_contact_path(network_contact) %></td>
+        <td><%= link_to 'Destroy', network_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Network contact', new_network_contact_path %>

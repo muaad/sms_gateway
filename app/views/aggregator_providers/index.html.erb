@@ -1,0 +1,27 @@
+<h1>Listing aggregator_providers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aggregator</th>
+      <th>Provider</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aggregator_providers.each do |aggregator_provider| %>
+      <tr>
+        <td><%= aggregator_provider.aggregator %></td>
+        <td><%= aggregator_provider.provider %></td>
+        <td><%= link_to 'Show', aggregator_provider %></td>
+        <td><%= link_to 'Edit', edit_aggregator_provider_path(aggregator_provider) %></td>
+        <td><%= link_to 'Destroy', aggregator_provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aggregator provider', new_aggregator_provider_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Host ip:</strong>
+  <%= @bind_detail.host_ip %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @bind_detail.port %>
+</p>
+
+<p>
+  <strong>Smpp version:</strong>
+  <%= @bind_detail.smpp_version %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @bind_detail.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @bind_detail.password %>
+</p>
+
+<p>
+  <strong>Aggregator:</strong>
+  <%= @bind_detail.aggregator %>
+</p>
+
+<%= link_to 'Edit', edit_bind_detail_path(@bind_detail) %> |
+<%= link_to 'Back', bind_details_path %>

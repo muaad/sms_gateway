@@ -1,0 +1,25 @@
+<%= form_for(@sender_id) do |f| %>
+  <% if @sender_id.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sender_id.errors.count, "error") %> prohibited this sender_id from being saved:</h2>
+
+      <ul>
+      <% @sender_id.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :aggregator_id %><br>
+    <%= f.text_field :aggregator_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sender_id %><br>
+    <%= f.text_field :sender_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

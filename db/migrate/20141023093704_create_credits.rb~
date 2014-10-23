@@ -1,0 +1,11 @@
+class CreateCredits < ActiveRecord::Migration
+  def change
+    create_table :credits do |t|
+      t.double :amount
+      t.string :currency
+      t.references :aggregator, index: true
+
+      t.timestamps
+    end
+  end
+end

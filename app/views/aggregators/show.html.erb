@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @aggregator.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @aggregator.code %>
+</p>
+
+<%= link_to 'Edit', edit_aggregator_path(@aggregator) %> |
+<%= link_to 'Back', aggregators_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@bind_detail) do |f| %>
+  <% if @bind_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bind_detail.errors.count, "error") %> prohibited this bind_detail from being saved:</h2>
+
+      <ul>
+      <% @bind_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :host_ip %><br>
+    <%= f.text_field :host_ip %>
+  </div>
+  <div class="field">
+    <%= f.label :port %><br>
+    <%= f.number_field :port %>
+  </div>
+  <div class="field">
+    <%= f.label :smpp_version %><br>
+    <%= f.text_field :smpp_version %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :aggregator_id %><br>
+    <%= f.text_field :aggregator_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

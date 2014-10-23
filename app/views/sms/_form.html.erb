@@ -1,0 +1,49 @@
+<%= form_for(@sm) do |f| %>
+  <% if @sm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sm.errors.count, "error") %> prohibited this sm from being saved:</h2>
+
+      <ul>
+      <% @sm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_status %><br>
+    <%= f.text_field :delivery_status %>
+  </div>
+  <div class="field">
+    <%= f.label :messageid %><br>
+    <%= f.text_field :messageid %>
+  </div>
+  <div class="field">
+    <%= f.label :phonebook_id %><br>
+    <%= f.text_field :phonebook_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :send_time %><br>
+    <%= f.datetime_select :send_time %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_time %><br>
+    <%= f.datetime_select :delivery_time %>
+  </div>
+  <div class="field">
+    <%= f.label :latency %><br>
+    <%= f.text_field :latency %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<h1>Listing aggregator_ips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip address</th>
+      <th>Aggregator</th>
+      <th>Whitlisted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aggregator_ips.each do |aggregator_ip| %>
+      <tr>
+        <td><%= aggregator_ip.ip_address %></td>
+        <td><%= aggregator_ip.aggregator %></td>
+        <td><%= aggregator_ip.whitlisted %></td>
+        <td><%= link_to 'Show', aggregator_ip %></td>
+        <td><%= link_to 'Edit', edit_aggregator_ip_path(aggregator_ip) %></td>
+        <td><%= link_to 'Destroy', aggregator_ip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aggregator ip', new_aggregator_ip_path %>

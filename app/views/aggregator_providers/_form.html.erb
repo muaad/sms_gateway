@@ -1,0 +1,25 @@
+<%= form_for(@aggregator_provider) do |f| %>
+  <% if @aggregator_provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aggregator_provider.errors.count, "error") %> prohibited this aggregator_provider from being saved:</h2>
+
+      <ul>
+      <% @aggregator_provider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :aggregator_id %><br>
+    <%= f.text_field :aggregator_id %>
+  </div>
+  <div class="field">
+    <%= f.label :provider_id %><br>
+    <%= f.text_field :provider_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

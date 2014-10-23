@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @sm.message %>
+</p>
+
+<p>
+  <strong>Delivery status:</strong>
+  <%= @sm.delivery_status %>
+</p>
+
+<p>
+  <strong>Messageid:</strong>
+  <%= @sm.messageid %>
+</p>
+
+<p>
+  <strong>Phonebook:</strong>
+  <%= @sm.phonebook %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @sm.cost %>
+</p>
+
+<p>
+  <strong>Send time:</strong>
+  <%= @sm.send_time %>
+</p>
+
+<p>
+  <strong>Delivery time:</strong>
+  <%= @sm.delivery_time %>
+</p>
+
+<p>
+  <strong>Latency:</strong>
+  <%= @sm.latency %>
+</p>
+
+<%= link_to 'Edit', edit_sm_path(@sm) %> |
+<%= link_to 'Back', sms_path %>

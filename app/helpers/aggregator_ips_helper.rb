@@ -1,0 +1,2 @@
+module AggregatorIpsHelper
+end

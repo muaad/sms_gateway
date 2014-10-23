@@ -1,0 +1,35 @@
+<h1>Listing bind_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Host ip</th>
+      <th>Port</th>
+      <th>Smpp version</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Aggregator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bind_details.each do |bind_detail| %>
+      <tr>
+        <td><%= bind_detail.host_ip %></td>
+        <td><%= bind_detail.port %></td>
+        <td><%= bind_detail.smpp_version %></td>
+        <td><%= bind_detail.username %></td>
+        <td><%= bind_detail.password %></td>
+        <td><%= bind_detail.aggregator %></td>
+        <td><%= link_to 'Show', bind_detail %></td>
+        <td><%= link_to 'Edit', edit_bind_detail_path(bind_detail) %></td>
+        <td><%= link_to 'Destroy', bind_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bind detail', new_bind_detail_path %>

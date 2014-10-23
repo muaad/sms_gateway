@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Aggregator:</strong>
+  <%= @aggregator_provider.aggregator %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @aggregator_provider.provider %>
+</p>
+
+<%= link_to 'Edit', edit_aggregator_provider_path(@aggregator_provider) %> |
+<%= link_to 'Back', aggregator_providers_path %>

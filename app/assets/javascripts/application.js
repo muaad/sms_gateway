@@ -39,4 +39,4 @@
 //= require jquery.themepunch.revolution.min
 //= require revulation-slide
 //= require bootstrap-sprockets
-//= require_tree .
+// require_tree .

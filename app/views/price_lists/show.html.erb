@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Credits:</strong>
+  <%= @price_list.credits %>
+</p>
+
+<p>
+  <strong>Cost per sms:</strong>
+  <%= @price_list.cost_per_sms %>
+</p>
+
+<p>
+  <strong>Aggregator:</strong>
+  <%= @price_list.aggregator %>
+</p>
+
+<p>
+  <strong>Bind detail:</strong>
+  <%= @price_list.bind_detail %>
+</p>
+
+<%= link_to 'Edit', edit_price_list_path(@price_list) %> |
+<%= link_to 'Back', price_lists_path %>

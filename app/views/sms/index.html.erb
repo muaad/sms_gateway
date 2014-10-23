@@ -1,0 +1,39 @@
+<h1>Listing sms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>Delivery status</th>
+      <th>Messageid</th>
+      <th>Phonebook</th>
+      <th>Cost</th>
+      <th>Send time</th>
+      <th>Delivery time</th>
+      <th>Latency</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sms.each do |sm| %>
+      <tr>
+        <td><%= sm.message %></td>
+        <td><%= sm.delivery_status %></td>
+        <td><%= sm.messageid %></td>
+        <td><%= sm.phonebook %></td>
+        <td><%= sm.cost %></td>
+        <td><%= sm.send_time %></td>
+        <td><%= sm.delivery_time %></td>
+        <td><%= sm.latency %></td>
+        <td><%= link_to 'Show', sm %></td>
+        <td><%= link_to 'Edit', edit_sm_path(sm) %></td>
+        <td><%= link_to 'Destroy', sm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sm', new_sm_path %>

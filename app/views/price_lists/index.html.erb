@@ -1,0 +1,31 @@
+<h1>Listing price_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Credits</th>
+      <th>Cost per sms</th>
+      <th>Aggregator</th>
+      <th>Bind detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_lists.each do |price_list| %>
+      <tr>
+        <td><%= price_list.credits %></td>
+        <td><%= price_list.cost_per_sms %></td>
+        <td><%= price_list.aggregator %></td>
+        <td><%= price_list.bind_detail %></td>
+        <td><%= link_to 'Show', price_list %></td>
+        <td><%= link_to 'Edit', edit_price_list_path(price_list) %></td>
+        <td><%= link_to 'Destroy', price_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Price list', new_price_list_path %>

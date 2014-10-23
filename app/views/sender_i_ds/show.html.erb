@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Aggregator:</strong>
+  <%= @sender_id.aggregator %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @sender_id.sender_id %>
+</p>
+
+<%= link_to 'Edit', edit_sender_id_path(@sender_id) %> |
+<%= link_to 'Back', sender_ids_path %>

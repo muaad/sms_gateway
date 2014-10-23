@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip address:</strong>
+  <%= @aggregator_ip.ip_address %>
+</p>
+
+<p>
+  <strong>Aggregator:</strong>
+  <%= @aggregator_ip.aggregator %>
+</p>
+
+<p>
+  <strong>Whitlisted:</strong>
+  <%= @aggregator_ip.whitlisted %>
+</p>
+
+<%= link_to 'Edit', edit_aggregator_ip_path(@aggregator_ip) %> |
+<%= link_to 'Back', aggregator_ips_path %>

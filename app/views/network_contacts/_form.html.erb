@@ -1,0 +1,33 @@
+<%= form_for(@network_contact) do |f| %>
+  <% if @network_contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@network_contact.errors.count, "error") %> prohibited this network_contact from being saved:</h2>
+
+      <ul>
+      <% @network_contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :phonebook_id %><br>
+    <%= f.text_field :phonebook_id %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :network_id %><br>
+    <%= f.text_field :network_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

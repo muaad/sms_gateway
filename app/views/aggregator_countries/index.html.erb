@@ -1,0 +1,27 @@
+<h1>Listing aggregator_countries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aggregator</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aggregator_countries.each do |aggregator_country| %>
+      <tr>
+        <td><%= aggregator_country.aggregator %></td>
+        <td><%= aggregator_country.country %></td>
+        <td><%= link_to 'Show', aggregator_country %></td>
+        <td><%= link_to 'Edit', edit_aggregator_country_path(aggregator_country) %></td>
+        <td><%= link_to 'Destroy', aggregator_country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aggregator country', new_aggregator_country_path %>
